@@ -1,11 +1,4 @@
-/*********************************************************************
- *   Licensed Materials - Property of IBM
- *   (C) Copyright IBM Corp. 2016. All Rights Reserved
- *
- *   US Government Users Restricted Rights - Use, duplication, or
- *   disclosure restricted by GSA ADP Schedule Contract with
- *   IBM Corp.
- *********************************************************************/
+
 
 importClass(Packages.com.tivoli.am.fim.trustserver.sts.utilities.IDMappingExtUtils);
 importPackage(Packages.com.ibm.security.access.scimclient);
@@ -77,8 +70,8 @@ headers.addHeader("Content-Type","application/x-www-form-urlencoded");
 
 // SSL httpPost - be sure to add certificate to rt trust store
 // This assumes default trust store (util.httpClient.defaultTrustStore in Advanced Configuration panel)
-//hr = HttpClient.httpPost("http://172.24.113.8:9080/itim/j_security_check", param);
-htPost = HttpClient.httpGet("http://172.24.113.8:9080/itim/restpwd");
+//hr = HttpClient.httpPost("http://xxxx:9080/itim/j_security_check", param);
+htPost = HttpClient.httpGet("http://xxxxx:9080/itim/restpwd");
 IDMappingExtUtils.traceString("Post response code: " + htPost.getCode());
 IDMappingExtUtils.traceString("Post response body: " + htPost.getBody());
 
